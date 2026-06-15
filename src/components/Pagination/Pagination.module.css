@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  gap: 16px !important;
+}
+
+.btn {
+  background: rgba(255, 232, 31, 0.08) !important;
+  border: 1px solid rgba(255, 232, 31, 0.3) !important;
+  color: rgba(255, 232, 31, 0.8) !important;
+  font-family: 'Exo 2', sans-serif;
+  border-radius: 8px !important;
+  transition: all 0.2s;
+}
+
+.btn:not(:disabled):hover {
+  background: rgba(255, 232, 31, 0.18) !important;
+  border-color: #FFE81F !important;
+  color: #FFE81F !important;
+}
+
+.btn:disabled {
+  opacity: 0.35 !important;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-family: 'Orbitron', monospace;
+  font-size: 13px;
+  min-width: 70px;
+  text-align: center;
+}

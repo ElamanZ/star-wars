@@ -1,0 +1,61 @@
+.root {
+  min-height: 100vh;
+  background: #1b030f;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  background: rgba(2, 5, 16, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 232, 31, 0.15);
+  height: 56px;
+}
+
+.logo {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  font-size: 18px;
+  color: #FFE81F;
+  letter-spacing: 0.15em;
+  flex-shrink: 0;
+  text-shadow: 0 0 15px rgba(255, 232, 31, 0.4);
+}
+
+.menu {
+  background: transparent !important;
+  border-bottom: none !important;
+  flex: 1;
+}
+
+.menu :global(.ant-menu-item) {
+  color: rgba(255, 255, 255, 0.45) !important;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.menu :global(.ant-menu-item:hover) {
+  color: #FFE81F !important;
+}
+
+.menu :global(.ant-menu-item-selected) {
+  color: #FFE81F !important;
+  background: transparent !important;
+}
+
+.menu :global(.ant-menu-item-selected::after) {
+  border-bottom-color: #FFE81F !important;
+}
+
+.content {
+  flex: 1;
+}
