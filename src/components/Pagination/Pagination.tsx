@@ -11,6 +11,7 @@ interface PaginationProps {
   hasPrev: boolean;
   onNext: () => void;
   onPrev: () => void;
+  
 }
 
 export const Pagination: React.FC<PaginationProps> = ({

@@ -1,35 +1,74 @@
 .wrapper {
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 48px;
-  gap: 16px !important;
+  gap: 16px;
 }
 
 .btn {
-  background: rgba(255, 232, 31, 0.08) !important;
-  border: 1px solid rgba(255, 232, 31, 0.3) !important;
-  color: rgba(255, 232, 31, 0.8) !important;
-  font-family: 'Exo 2', sans-serif;
-  border-radius: 8px !important;
-  transition: all 0.2s;
+  background: rgba(255, 232, 31, 0.08);
+  border: 1px solid rgba(255, 232, 31, 0.3);
+  color: rgba(255, 232, 31, 0.8);
+  font-family: "Exo 2", sans-serif;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
 .btn:not(:disabled):hover {
-  background: rgba(255, 232, 31, 0.18) !important;
-  border-color: #FFE81F !important;
-  color: #FFE81F !important;
+  background: rgba(255, 232, 31, 0.18);
+  border-color: #ffe81f;
+  color: #ffe81f;
 }
 
 .btn:disabled {
-  opacity: 0.35 !important;
+  opacity: 0.35;
   cursor: not-allowed;
 }
 
 .pageInfo {
-  color: rgba(255, 255, 255, 0.5) !important;
-  font-family: 'Orbitron', monospace;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Orbitron", monospace;
   font-size: 13px;
   min-width: 70px;
   text-align: center;
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+  .wrapper {
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+
+  .pageInfo {
+    font-size: 12px;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 480px) {
+  .wrapper {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .pageInfo {
+    width: 100%;
+    order: -1;
+    margin-bottom: 8px;
+  }
 }

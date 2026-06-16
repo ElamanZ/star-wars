@@ -28,9 +28,10 @@ export const SearchFilter: React.FC<SearchFilterProps> = ({
         allowClear
         style={{
           width: 320,
-          background: "rgba(255,255,255,0.05)",
-          border: "1px solid rgba(255,232,31,0.3)",
-          borderRadius: 8,
+          height: 40,
+          background: "rgba(198, 190, 35, 0.05)",
+          border: "1px solid rgba(197, 30, 155, 0.3)",
+          borderRadius: 10,
           color: "#fff",
         }}
         className="sw-search-input"

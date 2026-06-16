@@ -7,8 +7,10 @@ import {
   formatGender,
   extractIdFromUrl,
   EYE_COLOR_MAP,
-} from "../../utils/helpers";
+} from "../../utils/helpers" ;
 import { FilmTag } from "./FilmTag";
+
+
 import styles from "./CharacterModal.module.css";
 
 const { Title, Text } = Typography;
@@ -36,7 +38,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ uid, onClose }) 
   };
 
   return (
-    <Modal open={!!uid} onCancel={onClose} footer={null} width={680} className={styles.modal} destroyOnClose>
+    <Modal open={!!uid} onCancel={onClose} footer={null} width={500} className={styles.modal} destroyOnClose>
       {isLoading && <Skeleton active paragraph={{ rows: 8 }} />}
       {isError && <div className={styles.error}>Не удалось загрузить данные персонажа.</div>}
       {person && (
@@ -64,9 +66,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ uid, onClose }) 
               </Button>
             </div>
           </div>
-
           <Divider className={styles.divider} />
-
           <Descriptions
             column={2}
             size="small"

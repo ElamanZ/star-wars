@@ -1,25 +1,25 @@
 .modal :global(.ant-modal-content) {
-  background: linear-gradient(160deg, #0d1225, #060a18);
-  border: 1px solid rgba(255,232,31,0.2);
-  border-radius: 16px;
+  background: linear-gradient(160deg, #3a3c3f, #5a5252);
+  border: 1px solid rgba(206, 196, 57, 0.2);
+  border-radius: 20px;
   box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 40px rgba(255,232,31,0.05);
-  padding: 32px;
+  padding: 30px;
 }
-
 .modal :global(.ant-modal-close) { color: rgba(255,255,255,0.4); }
-.modal :global(.ant-modal-close:hover) { color: #FFE81F; }
+.modal :global(.ant-modal-close:hover) { color: #efefea; }
 
 .content { color: #fff; }
 
 .header { display: flex; gap: 24px; align-items: flex-start; }
 
 .imgWrapper {
-  width: 140px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
-  border: 2px solid rgba(255,232,31,0.25);
+  display: flex;
+ 
 }
 
 .avatar {
@@ -32,12 +32,14 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   padding-top: 4px;
+
+  
 }
 
 .name {
-  color: #FFE81F ;
+  color: #ebeae3 ;
   font-family: 'Orbitron', monospace ;
   font-size: 20px ;
   margin: 0 ;
@@ -46,23 +48,23 @@
 
 .linkBtn {
   align-self: flex-start;
-  background: rgba(255,232,31,0.08) ;
-  border-color: rgba(255,232,31,0.3) ;
-  color: rgba(255,232,31,0.7) ;
+  background: rgba(237, 240, 240, 0.08) ;
+  border-color: rgba(59, 57, 59, 0.3) ;
+  color: rgba(240, 239, 235, 0.7) ;
   font-size: 12px;
 }
 .linkBtn:hover {
-  background: rgba(255,232,31,0.15) ;
-  color: #FFE81F ;
+  background: rgba(122, 122, 117, 0.15) ;
+  color: #f4ecf3dc ;
 }
 
 .divider {
-  border-color: rgba(255,232,31,0.1) ;
+  border-color: rgba(155, 153, 140, 0.1) ;
   margin: 20px 0 ;
 }
 
 .dividerLabel {
-  color: rgba(255,232,31,0.5) ;
+  color: rgba(10, 22, 64, 0.5) ;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -74,11 +76,96 @@
   background: transparent ;
 }
 
-.films { display: flex; flex-wrap: wrap; gap: 6px; }
+.films 
+{
+   display: flex; 
+   flex-wrap: wrap;
+    gap: 7px; 
+    color: #3a3c3f;
+   }
 
 .error {
-  color: #ff4d4f;
-  text-align: center;
-  padding: 40px 0;
-  font-family: 'Exo 2', sans-serif;
+   color: #ff4d4f;
+   text-align: center;
+   padding: 40px 0;
+   font-family: 'Exo 2', sans-serif;
+} 
+
+
+@media (max-width: 768px) {
+     .modal :global(.ant-modal-content) {
+    padding: 24px;
+  }
+
+  .header {
+    gap: 16px;
+  }
+
+  .imgWrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .headerInfo {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal :global(.ant-modal-content) {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .imgWrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .headerInfo {
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    padding-top: 0;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .linkBtn {
+    align-self: center;
+  }
+
+  .films {
+    justify-content: center;
+  }
+
+  .divider {
+    margin: 16px 0;
+  }
+
+  .descriptions :global(.ant-descriptions-row) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .descriptions :global(.ant-descriptions-item-label),
+  .descriptions :global(.ant-descriptions-item-content) {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+    text-align: left;
+  }
 }

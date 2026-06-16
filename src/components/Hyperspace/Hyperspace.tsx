@@ -6,6 +6,7 @@ interface Star {
   z: number;
   px: number;
   py: number;
+  
 }
 
 interface HyperspaceProps {

@@ -11,14 +11,15 @@ interface CharacterListProps {
   onCardClick: (uid: string) => void;
 }
 
+
 const SkeletonCards = () => (
   <>
     {Array.from({ length: 10 }).map((_, i) => (
       <Col key={i} xs={24} sm={12} md={8} lg={6} xl={4}>
         <Card
           style={{
-            background: "rgba(10,15,30,0.95)",
-            border: "1px solid rgba(255,232,31,0.1)",
+            background: "rgba(226, 229, 239, 0.95)",
+            border: "1px solid rgba(246, 237, 243, 0.1)",
             borderRadius: 12,
             overflow: "hidden",
           }}
@@ -27,6 +28,7 @@ const SkeletonCards = () => (
           <Skeleton active paragraph={{ rows: 3 }} />
         </Card>
       </Col>
+
     ))}
   </>
 );

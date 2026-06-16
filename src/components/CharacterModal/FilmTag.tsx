@@ -6,6 +6,7 @@ interface FilmTagProps {
   filmUrl: string;
 }
 
+
 export const FilmTag: React.FC<FilmTagProps> = ({ filmUrl }) => {
   const id = extractIdFromUrl(filmUrl);
   const { data, isLoading } = useGetFilmByIdQuery(id, { skip: !id });
