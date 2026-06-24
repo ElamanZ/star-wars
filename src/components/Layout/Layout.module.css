@@ -1,0 +1,105 @@
+.root {
+  min-height: 100vh;
+  background: #1b030f;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  background: rgba(2, 5, 16, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 232, 31, 0.15);
+  height: 56px;
+}
+
+.logo {
+  font-family: "Orbitron", monospace;
+  font-weight: 900;
+  font-size: 18px;
+  color: #ffe81f;
+  letter-spacing: 0.15em;
+  flex-shrink: 0;
+  text-shadow: 0 0 15px rgba(255, 232, 31, 0.4);
+}
+
+.menu {
+  background: transparent;
+  border-bottom: none;
+  flex: 1;
+}
+
+
+.menu :global(.ant-menu-item) {
+  color: rgba(255, 255, 255, 0.45);
+  font-family: "Exo 2", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.menu :global(.ant-menu-item:hover) {
+  color: #ffe81f;
+}
+
+.menu :global(.ant-menu-item-selected) {
+  color: #ffe81f;
+  background: transparent;
+}
+
+.menu :global(.ant-menu-item-selected::after) {
+  border-bottom-color: #ffe81f;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+  }
+
+  .menu :global(.ant-menu-item) {
+    font-size: 12px;
+    padding-inline: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu :global(.ant-menu) {
+    justify-content: center;
+  }
+
+  .menu :global(.ant-menu-item) {
+    font-size: 11px;
+    padding-inline: 6px;
+  }
+}
